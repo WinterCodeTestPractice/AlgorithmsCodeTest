@@ -37,16 +37,20 @@ public class Baekjoon_5525 {
         for (int i = 0; i < m; i++) {
             //총 sch 문자 배열에 i번째 검색될 2*n+1의 char 배열o 
             char[] o = new char[2 * n + 1];
+            //범위가 문자열 안에 있다면
             if (i + (2 * n) < m) {
                 int u = 0;
                 for (int j = i; j < (2 * n + 1) + i; j++) {
+                    // 문자 배열중 범위 안에 있는 것만 탐색하기 위해 배열 o 에 넣어둠
                     o[u] = sch[j];
                     u++;
                 }
                 int res = 0;
                 for (int k = 0; k < 2 * n + 1; k++) {
+                    //문자 배열의 원소들 하나하나가 맞다면 res ++
                     if (o[k] == check[k]) res++;
                 }
+                //res가 2*n+1이 되야 모든 문자 배열이 맞다는 소리이기 때문에 cnt 증가
                 if (res == 2 * n + 1) cnt++;
             }
         }
@@ -54,7 +58,7 @@ public class Baekjoon_5525 {
         /*
          * 결론: 탐색한 개수 cnt가 구해졌으나 50점 ,
          * 어떠한 문자열 알고리즘 줄일 수 있을까?
-         *
+         * 시간 복잡도를 더 줄일 수 있는 방법은??
          * */
     }
 }
