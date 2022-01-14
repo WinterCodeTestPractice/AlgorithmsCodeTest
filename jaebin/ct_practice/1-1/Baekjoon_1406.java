@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class Baekjoon_1406 {
     /*
+
+    array list , linked list  개념을 잡자.
     * 시간 제한이 짧은 문제: 백준 1406 에디터
     * 알맞는 자료구조를 이용하여 풀자!
     * */
@@ -27,33 +29,42 @@ public class Baekjoon_1406 {
         for (int i = 0; i < m; i++) {
             comm[i] = sc.nextLine();
         }
+        //a,b,c,d,|
         for (int i = 0; i < n; i++) {
             arr.add(s.charAt(i));
         }
         //이중 for문을 이용한 전체 탐색 로직
         for (int i = 0; i < m; i++) {
+            //i가 0이면 첫번째 명령어
             for (int j = 0; j < arr.size(); j++) {
+                //커서가 있는 곳에서 명령어를 실행시키기위해 커서를 먼저 찾는다.
                 if (arr.get(j).equals('|')) {
                     if (comm[i].equals("L")) {
+                        //맨 앞이라 아무 실행 x
                         if (j == 0) {
                             continue;
                         }
+                        //현재랑 현재 앞과 스왑
                         Collections.swap(arr, j - 1, j);
                         break;
                     } else if (comm[i].equals("D")) {
                         if (j == arr.size() - 1) {
                             continue;
                         }
+                        //현재랑 현재 뒤와 스왑
                         Collections.swap(arr, j, j + 1);
                         break;
                     } else if (comm[i].equals("B")) {
                         if (j == 0) {
                             continue;
                         }
+                        //현재 앞의 문자 삭제
                         arr.remove(j - 1);
                         break;
                     } else if (comm[i].charAt(0) == 'P') {
+                        //해당 문자 뽑아내기
                         char new_word = comm[i].charAt(2);
+                        //
                         arr.add(j, new_word);
                         break;
                     }
