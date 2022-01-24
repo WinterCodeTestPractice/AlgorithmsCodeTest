@@ -10,3 +10,7 @@
 * 2-2, 프로그래머스 : [괄호 회전하기](https://programmers.co.kr/learn/courses/30/lessons/76502)
 * 2-3, 백준 알고리즘 : [2583 영역구하기](https://www.acmicpc.net/problem/2583)
 
+## 3주차 문제
+* 3-1, 프로그래머스 : [전력망을 둘로 나누기](https://programmers.co.kr/learn/courses/30/lessons/86971)
+* 3-2, 프로그래머스 : [n^2 배열 자르기](https://programmers.co.kr/learn/courses/30/lessons/87390)
+* 3-3, 백준 알고리즘 : [1654번 랜선 자르기](https://www.acmicpc.net/problem/1654)
