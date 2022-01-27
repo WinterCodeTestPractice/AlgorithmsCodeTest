@@ -23,18 +23,20 @@ resultList = []
 # bfs 탐색 방식을 이용해서 해결한다!
 for i in range(M):
     for j in range(N):
+        # 2차원 배열의 상태가 0인 경우 값을 증가시키고 리스트형태로 큐에 집어 넣어서 그자리에 카운트를 늘려준다.
         if graph[i][j] == 0:
             count = 1
             queue = deque([])
             queue.append([i, j])
             graph[i][j] = count
+            # queue를 전체 반복한다.
             while queue:
                 y, x = queue.popleft()
                 # 상하좌우 방향을 움직여가며 확인한다
                 for k in range(4):
                     nY = y + dy[k]
                     nX = x + dx[k]
-                    # 지난번 달팽이 배열 문제랑 똑같이 작동 
+                    # 지난번 달팽이 배열 문제랑 똑같이 작동
                     if 0 <= nX < N and 0 <= nY < M and graph[nY][nX] == 0:
                         graph[nY][nX] = 1
                         queue.append([nY, nX])
