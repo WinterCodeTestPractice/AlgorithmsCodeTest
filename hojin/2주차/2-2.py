@@ -11,7 +11,6 @@ def solution(s):
     # 전역변수 cnt , resultSum 선언
     global cnt
     global resultSum
-
     # deq안에 넣기
     for i in s:
         deq.append(i)
@@ -38,7 +37,7 @@ def solution(s):
                     stack.pop()
                 else:
                     break
-        # 스택이 비었거나 cnt값이 0이면 괄호가 모두 삭제된 상태라 올바른 괄호임! 
+        # 스택이 비었거나 cnt값이 0이면 괄호가 모두 삭제된 상태라 올바른 괄호임!
         if(len(stack) == 0 and cnt == 0):
             resultSum+=1
         first = deq.popleft()
