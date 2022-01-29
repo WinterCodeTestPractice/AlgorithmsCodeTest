@@ -14,3 +14,8 @@
 * 3-1, 프로그래머스 : [전력망을 둘로 나누기](https://programmers.co.kr/learn/courses/30/lessons/86971)
 * 3-2, 프로그래머스 : [n^2 배열 자르기](https://programmers.co.kr/learn/courses/30/lessons/87390)
 * 3-3, 백준 알고리즘 : [1654번 랜선 자르기](https://www.acmicpc.net/problem/1654)
+
+## 4주차 문제
+* 4-1, 프로그래머스 : [배달](https://programmers.co.kr/learn/courses/30/lessons/12978)
+* 4-2, 프로그래머스 : [행렬의 곱셈](https://programmers.co.kr/learn/courses/30/lessons/12949)
+* 4-3, 백준 알고리즘 : [16926번 배열돌리기 1](https://www.acmicpc.net/problem/16926)
