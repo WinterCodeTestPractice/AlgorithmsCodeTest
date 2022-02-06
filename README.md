@@ -19,3 +19,8 @@
 * 4-1, 프로그래머스 : [배달](https://programmers.co.kr/learn/courses/30/lessons/12978)
 * 4-2, 프로그래머스 : [행렬의 곱셈](https://programmers.co.kr/learn/courses/30/lessons/12949)
 * 4-3, 백준 알고리즘 : [16926번 배열돌리기 1](https://www.acmicpc.net/problem/16926)
+
+## 5주차 문제
+* 5-1, 백준 알고리즘 : [1021번 회전하는 큐](https://www.acmicpc.net/problem/1021)
+* 5-2, 리트 코드 : [Unique Paths](https://leetcode.com/problems/unique-paths/)
+* 5-3, 백준 알고리즘 : [7576번 토마토](https://www.acmicpc.net/problem/7576)
