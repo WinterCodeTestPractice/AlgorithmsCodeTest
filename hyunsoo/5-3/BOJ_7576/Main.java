@@ -3,11 +3,22 @@ package BOJ_7576;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.StringTokenizer;
+import java.util.*;
+
+class Location {
+    int y;
+    int x;
+
+    public Location(int y, int x) {
+        this.y = y;
+        this.x = x;
+    }
+}
 
 public class Main {
 
     static int[][] map;
+    static Queue<Location> queue = new LinkedList<>();
     static int[] moveY = {1, 0, -1, 0};
     static int[] moveX = {0, 1, 0, -1};
     static int N;
@@ -32,6 +43,7 @@ public class Main {
                 if (input == -1) {
                     max--;
                 } else if (input == 1) {
+                    queue.add(new Location(i, j));
                     status++;
                 }
 
@@ -41,14 +53,14 @@ public class Main {
 
         while (max != status) {
             int tempStatus = status;
-            int[][] tempMap = copyArray();
+            List<Location> locations = new ArrayList<>();
 
-            for (int i = 0; i < N; i++) {
-                for (int j = 0; j < M; j++) {
-                    if (tempMap[i][j] == 1) {
-                        fillTomato(i, j);
-                    }
-                }
+            while (!queue.isEmpty()) {
+                locations.add(queue.poll());
+            }
+
+            for (Location location : locations) {
+                fillTomato(location.y, location.x);
             }
 
             if (tempStatus == status) {
@@ -69,21 +81,10 @@ public class Main {
 
             if (0 <= ny && ny < N && 0 <= nx && nx < M) {
                 if (map[ny][nx] == 1 || map[ny][nx] == -1) continue;
+                queue.add(new Location(ny, nx));
                 map[ny][nx] = 1;
                 status++;
             }
         }
-    }
-
-    public static int[][] copyArray() {
-        int[][] result = new int[N][M];
-
-        for (int i = 0; i < N; i++) {
-            for (int j = 0; j < M; j++) {
-                result[i][j] = map[i][j];
-            }
-        }
-
-        return result;
     }
 }
