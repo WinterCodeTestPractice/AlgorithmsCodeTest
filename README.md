@@ -24,3 +24,8 @@
 * 5-1, 백준 알고리즘 : [1021번 회전하는 큐](https://www.acmicpc.net/problem/1021)
 * 5-2, 리트 코드 : [Unique Paths](https://leetcode.com/problems/unique-paths/)
 * 5-3, 백준 알고리즘 : [7576번 토마토](https://www.acmicpc.net/problem/7576)
+
+## 6주차 문제
+* 6-1, 프로그래머스 : [가장 먼 노드](https://programmers.co.kr/learn/courses/30/lessons/49189)
+* 6-2, 리트 코드 : [3Sum](https://leetcode.com/problems/3sum/)
+* 6-3, 백준 알고리즘 : [1991번 트리 순회](https://www.acmicpc.net/problem/1991)
